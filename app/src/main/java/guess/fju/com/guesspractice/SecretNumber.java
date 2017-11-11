@@ -22,17 +22,18 @@ public class SecretNumber extends AppCompatActivity {
         TextView txt_back = (TextView) findViewById(R.id.txt_back);
         EditText ed_enter = (EditText) findViewById(R.id.ed_enter);
         int number = Integer.parseInt(ed_enter.getText().toString());
-        if (number<n){
-            txt_front.setText(Integer.toString(number));
-        }else if (number>n){
-            txt_back.setText(Integer.toString(number));
-        }else {
-            new AlertDialog.Builder(this)
-                    .setMessage("Boom")
-                    .setPositiveButton("OK",null)
-                    .show();
-        }
 
+            if (number < n) {
+                txt_front.setText(Integer.toString(number));
+            } else if (number > n) {
+                txt_back.setText(Integer.toString(number));
+            } else {
+                new AlertDialog.Builder(this)
+                        .setMessage(R.string.right)
+                        .setPositiveButton(R.string.ok, null)
+                        .show();
+
+            }
 
     }
 }

@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">GuessPractice</string>
+    <string name="right">Boom</string>
+    <string name="ok">OK</string>
 </resources>
